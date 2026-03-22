@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shashika Harshani Jayalath Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:'Segoe UI',sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    position:sticky;
+    top:0;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    padding:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    z-index:100;
+}
+
+nav a{
+    margin:0 15px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    font-size:16px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffeb3b;
+    transform:scale(1.1);
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+/* CARD STYLE */
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* PROFILE CARD */
+.profile-card{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.profile-card img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+/* SECTION HEADERS */
+h3{
+    color:#2575fc;
+    margin-bottom:15px;
+    position:relative;
+}
+
+h3::after{
+    content:"";
+    width:50px;
+    height:3px;
+    background:#ff6a00;
+    display:block;
+    margin-top:5px;
+    border-radius:2px;
+}
+
+/* SKILLS */
+.skills span{
+    display:inline-block;
+    background: linear-gradient(45deg, #ff6a00, #ff8e53);
+    color:white;
+    padding:8px 14px;
+    margin:5px;
+    border-radius:8px;
+    font-size:14px;
+    transition: transform 0.3s;
+}
+
+.skills span:hover{
+    transform: scale(1.1);
+}
+
+/* CONTACT */
+.contact-item{
+    margin:12px 0;
+    font-size:16px;
+    display:flex;
+    align-items:center;
+}
+
+.contact-item i{
+    margin-right:12px;
+    color:#2575fc;
+}
+
+/* PROJECT FULL WIDTH */
+#project{
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    color:#333;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+    .profile-card{
+        flex-direction:column;
+    }
+}
+html {
+    scroll-padding-top: 80px;
+}
+p {
+    text-align: justify;
+    text-justify: inter-word; /* improves spacing in some browsers */
+    line-height: 1.6; /* optional, makes text more readable */
+}
+/* Professional Development Table */
+.table-container {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+thead th {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border-radius: 8px 8px 0 0;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+    text-align: justify;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tbody tr:hover {
+    background: #e0f7fa;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        display: none;
+    }
+    tbody td {
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        padding-left: 50%;
+        position: relative;
+    }
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        top: 12px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+}
+/* Curriculum Vitae */
+#cv p, #cv ul {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#cv ul {
+    margin-left: 20px;
+}
+
+#cv h3 {
+    color: #2575fc;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#cv h3::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #ff6a00;
+    display: block;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+nav {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping */
+    justify-content: center; /* center-align wrapped links */
+    gap: 10px; /* space between links */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+    padding: 6px 10px;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+    transform: scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#proback">Professional Background</a>
+<a href="#selfeva">Self Evaluation</a>
+<a href="#skills">Skills</a>
+<a href="#expert">Experience</a>
+<a href="#project">Project</a>
+<a href="#profdev">Professional Development</a>
+<a href="#cv">Curriculum Vitae</a>
+<a href="#learn">Learning Reflections</a>
+<a href="#peerevau">Peer Evaluation Post</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<!-- PROFILE -->
+<div class="card profile-card" id="home">
+    <img src="shashika.jpg">
+    <div>
+        <h2>Shashika Harshani Jayalath</h2>
+        <p>Finance Professional | MBA Student</p>
+    </div>
+</div>
+
+<!-- GRID SECTION -->
+<div class="grid">
+
+<!-- ABOUT -->
+<div class="card" id="about">
+<h3>About Me</h3>
+<p>
+My name is Shashika Harshani Jayalath, an accountant, financial reporting, and business operations professional who has more than 10 years of accounting experience.
+
+In my career, I gained a solid competency in financial process management, data analyzes and facilitation of organizational performance.
+
+I am currently in Auckland, New Zealand and I am preoccupied with establishing my career and getting used to the dynamic business world.
+</p>
+</div>
+
+<!-- Professional Background -->
+<div class="card" id="proback">
+<h3>Professional Background</h3>
+<p>
+I have gained extensive experience working at Singer Sri Lanka PLC, where I progressed through multiple roles including Accounts Assistant, Accounts Officer, and Operations Finance Executive.
+
+In these roles, I was responsible for managing receivables, preparing financial reports, conducting reconciliations, and supporting key financial operations.
+
+This experience has strengthened my ability to work in fast-paced environments, meet deadlines, and contribute effectively to organizational success.
+</p>
+</div>
+
+<!-- Self Evaluation -->
+<div class="card" id="selfeva">
+<h3>Self Evaluation</h3>
+<p>
+
+This self evaluation will be grounded on self-awareness framework suggested by Whetten and Cameron, which will allow me to determine my strongest aspects and possible ways of improvement 
+<br>
+
+<b>Strengths</b>
+
+Analytical Skills -I can accurately analyze financial information and help in making decisions.
+
+Details Orientation - I am accurate in reports and finances.
+
+Teamwork - I collaborate with other people and achieve success within a team.
+
+Time Management- I am able to cope with various tasks and deadlines well.
+<br>
+
+<b>Areas for Development</b>
+
+High Level Technical skills - I want to acquire more expertise in Excel and Power BI.
+
+Skills on Leadership - I would like to acquire confidence in team leadership and decision making.
+
+Communication Confidence- Improvement of my proficiency in presentation and making speeches and at the same time with the more complex understanding of New approved Zealand accent to be able to communicate much more effectively.
+</p>
+</div>
+
+<!-- SKILLS -->
+<div class="card" id="skills">
+<h3>Skills</h3>
+<div class="skills">
+<span>Financial Analysis</span><br>
+<span>Receivables Management</span><br>
+<span>ERP Systems</span><br>
+<span>Leadership and Team Management</span><br>
+<span>Problem Solving</span><br>
+<span>Critical Thinking</span><br>
+<span>Adaptability/ Flexibility</span>
+</div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="card" id="expert">
+<h3>Experience</h3>
+<p><strong>Singer Sri Lanka PLC</strong></p>
+<p>Operations Finance Executive</p>
+<ul>
+<li>Financial reporting</li>
+<li>Receivables management</li>
+<li>Reconciliations</li>
+</ul>
+</div>
+
+<!-- EDUCATION -->
+<div class="card">
+<h3>Education</h3>
+<ul>
+<li>MBA – University of Gloucestershire</li>
+<li>Postgraduate Diploma</li>
+<li>Executive Diploma</li>
+</ul>
+</div>
+
+</div>
+
+<!-- PROJECT FULL WIDTH -->
+<div class="card" id="project">
+  <h3>Project – Online Remittance Processing in Sri Lanka Economic Crisis</h3>
+
+  <p><strong>🔹 Project Overview</strong></p>
+  <p>
+   As a result of the Sri Lankan economic crisis in early 2023, Sri Lanka experienced a severe fuel crisis requiring most organization to work in remote conditions. 
+It posed serious operational problems at Singer Sri Lanka PLC where I worked in the finance department especially in dealing with remittances and trade receivables. 
+  </p>
+
+  <p><strong>🔹 Issue</strong></p>
+  <p>
+    The normal remittance process required submitting original payment documents by the sales promotion officers (SPOs). These were then confirmed and inputted into the IFS ERP system to update receivables and approve dealer orders within credit limits. 
+    With the shift to work-from-home:
+  </p>
+  <ul>
+    <li>There was no possibility of handing over physical documents.</li>
+    <li>A huge accumulation of unprocessed remittances built up.</li>
+    <li>Credit limits of dealers were not revised in time.</li>
+    <li>This slowed order approvals and affected the business.</li>
+  </ul>
+
+  <p><strong>🔹 My Role</strong></p>
+  <p>
+    This problem was identified as a high risk to the business continuity and receivable management as an Operations Finance Executive. I took initiative to: 
+  </p>
+  <ul>
+    <li>Examine the issue and find gaps in the processes.</li>
+    <li>Discuss and conduct several Zoom meetings with supervisors and Area Sales Managers.</li>
+    <li>Liaise with top management and IT departments for immediate system development.</li>
+    <li>Introduce a management digital solution called “Online Remittance Processing System”.</li>
+    <li>Conduct training and implement within one week.</li>
+  </ul>
+
+  <p><strong>🔹 Solution</strong></p>
+  <p>
+I suggested the introduction of a temporal online remittance processing system in place of the paperwork. We then discussed the idea with the Operations Finance Manager, after which we presented it to the Finance Director, and Operations Director and got their approval. The implementation included.  </p>
+  <ul>
+    <li>Working with the IT department to create a backend platform.</li>
+    <li>Enabling SPOs to post payment documents online.</li>
+    <li>Checking payments through the Bank Reconciliation System (BRS).</li>
+    <li>Creating a document reference number for each payment.</li>
+    <li>Entering certified information into the IFS system.</li>
+  </ul>
+
+  <p><strong>🔹 Implementation</strong></p>
+  <p>
+    After development, I organized Zoom training for over 100 sales officers and area managers. The process included:
+  </p>
+  <ul>
+    <li>Pilot testing prior to full implementation.</li>
+    <li>Switched to real-time data processing.</li>
+  </ul>
+
+  <p><strong>🔹 Outcome</strong></p>
+  <ul>
+    <li>The new system brought significant improvement.</li>
+    <li>Remittances backlog cleared successfully.</li>
+    <li>Ensured real-time updating of receivables.</li>
+    <li>Better dealer order approval process to support sales.</li>
+    <li>Reduced time lost on credit limit issues.</li>
+    <li>Removed reliance on hardcopy documents.</li>
+    <li>Time saved and lessened document storage needs (3000+ monthly slips).</li>
+  </ul>
+
+  <p><strong>🔹 Long-Term Impact</strong></p>
+  <p>
+     Even though it was implemented as a temporary measure during the crisis, the system was much more effective than the previous process. As a result: 
+  </p>
+  <ul>
+    <li>Top management identified it as valuable beyond the crisis period and essential to streamline daily operations.</li>
+    <li>The IFS system later incorporated additional features.</li>
+    <li>It became a regular practice.</li>
+    <li>The project helped streamline organizational operations and enhance financial management.</li>
+  </ul>
+
+  <p><strong>🔹 Recognition</strong></p>
+  <p>
+The current Financial Director and CEO officially acknowledged the effort made by me and my manager to implement this solution successfully and optimize the business processes in a difficult time.  </p>
+</div>
+
+<!-- PROFESSIONAL DEVELOPMENT -->
+<div class="card" id="profdev">
+  <h3>Professional Development</h3>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Personal Goals</th>
+          <th>Career Goals</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            👥 <strong>Leadership</strong><br>
+            Learn how to be a team leader and increase performance.<br>
+            <em>Course:</em> Undertake courses through LinkedIn Learning and practice with other people.
+          </td>
+          <td>
+            💼 <strong>Secure a Job in New Zealand</strong><br>
+            Earn a finance/management position.In order to do that I have to complete  the Masters  and  follow New zealand base ERP systems such as Xero.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            💬 <strong>Communication Skills</strong><br>
+            Enhance professional communication and presentation.<br>
+            <em>Course:</em> Effectively involve with newzealland studenets to learn their accent. Effective communication skills in the workplace. I have used it in my presentation and communication reflection.
+          </td>
+          <td>
+            🤝 <strong>Build Professional Network</strong><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            📊 <strong>Strategic Thinking</strong><br>
+            Enhance the professional communication and presentation.Effective communication skills in the workplace, Coursera.<br>
+          </td>
+          <td>
+            🚀 <strong>Establish My Own Tourism Business in New Zealand</strong><br>
+            Already registered in Sri Lanka, planning to expand in New Zealand.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- CURRICULUM VITAE -->
+<div class="card" id="cv">
+  <h3>Curriculum Vitae</h3>
+
+  <p><strong>PROFESSIONAL PROFILE</strong></p>
+  <p>
+    A dedicated finance and operations professional with over 10 years of experience in accounts administration, operational finance, receivable management, and process coordination. Strong communicator, fast learner, and dependable team contributor with advanced analytical and reporting skills. Fully eligible to work in New Zealand.
+  </p>
+
+  <p><strong>PROFESSIONAL EXPERIENCE</strong></p>
+  <p><strong>Singer Sri Lanka PLC</strong></p>
+  <ul>
+    <li>Operations Finance Executive — June 2022 – September 2025</li>
+    <li>Accounts Officer — February 2020 – June 2022</li>
+    <li>Accounts Assistant — July 2015 – February 2020</li>
+  </ul>
+  <p><strong>Key Responsibilities:</strong></p>
+  <ul>
+    <li>Managed island-wide trade creditors and processed remittances.</li>
+    <li>Verified and processed dealer discounts.</li>
+    <li>Managed vehicle loan and insurance recoveries and performed loan reconciliations.</li>
+    <li>Released monthly reporting schedules for all trade channels.</li>
+    <li>analyzed ledger accounts and assisted with balance confirmations.</li>
+    <li>Computed Expected Credit Loss (ECL) and prepared management reports.</li>
+    <li>Conducted arrears reviews and managed trade receivables.</li>
+  </ul>
+
+  <p><strong>Tea Bush Hotel (Pvt) Ltd (SC International)</strong></p>
+  <ul>
+    <li>Accounts Executive — March 2012 – June 2015</li>
+    <li>Handled petty cash, prepared payroll, processed payments, managed stock, and created daily/monthly reports.</li>
+  </ul>
+
+  <p><strong>Musaeus College, Colombo 07</strong></p>
+  <ul>
+    <li>Accounts Clerk — March 2010 – December 2010</li>
+  </ul>
+
+  <p><strong>EDUCATION</strong></p>
+  <ul>
+    <li>MBA – University of Gloucestershire, UK (2021/2022)</li>
+    <li>Postgraduate Diploma in Strategic Management & Leadership – IDM Achievers (2021/2022)</li>
+    <li>Executive Diploma in Business Administration – University of Colombo (2019/2020)</li>
+    <li>A/L Commerce 2009 – 2B, 1C</li>
+    <li>O/L 2005 – 5As, 2Bs, 3Cs</li>
+  </ul>
+
+  <p><strong>PROFESSIONAL QUALIFICATIONS</strong></p>
+  <ul>
+    <li>Chartered Accountancy CAB I</li>
+    <li>Diploma in English – Aquinas College</li>
+    <li>IT, English & Career Skills – MAS Institute</li>
+    <li>Master of Business Administration (In Progress) – ICL Graduate Business School, Auckland, NZ · 2025–Present</li>
+  </ul>
+
+  <p><strong>TECHNICAL SKILLS</strong></p>
+  <p>
+    MS Office, IFS, QuickBooks
+  </p>
+
+  <p><strong>SKILLS</strong></p>
+  <ul>
+    <li>Financial Reporting & Analysis</li>
+    <li>Accounts Receivable & Credit Control</li>
+    <li>Trade Creditor Management</li>
+    <li>Ledger Reconciliation</li>
+    <li>Budget Monitoring</li>
+    <li>Data Analysis & Reporting</li>
+    <li>Microsoft Excel (Advanced)</li>
+    <li>QuickBooks & IFS Systems</li>
+    <li>Strong Communication & Teamwork</li>
+  </ul>
+
+  <p><strong>REFERENCES</strong> – Available upon request</p>
+</div>
+
+<!-- Learning Reflections -->
+<div class="card" id="learn">
+<h3>Learning Reflections</h3>
+<p>
+    <strong> Business Professionalism</strong><br></p>
+    <p>
+One of the most important thing that I learned during my time at ICL is the concept of business professionalism during the digital age. In today's society, professionalism does not end with face-to-face contact and includes the way people behave and present online. 
+    </p><br>
+    <p>
+Throughout this course, I gained an appreciation for the use of digital platforms in building professional identity and organizational reputation. The major learning I acquired is that professionalism in business is a system of the communication, behavior, ethics, and the digital image. Every action that is done by an individual, especially in an online environment, makes his professional image. For example, social media engagement, online communication and digital collaboration tools all have a role in the way others view a professional. This learning has been very useful in my academic and personal development. In the course of my scholastic endeavors, I have become more mindful of how I communicate in online discussions and group projects and ensure that my communication is respectful, clear, and professional. In my personal life, I have started to review my social media presence to ensure that I have the professional look.
+</p></br>
+<p>
+From a prospective career standpoint, I know that employers often evaluate prospective candidates based on their digital footprint. A strong presence on social media, such as having an updated profile on LinkedIn, can open up opportunities for those who have a negative cruise online can negatively affect one's career. As a result, I have become encouraged to try and manage my digital identity. I have already started applying this learning when I improved my LinkedIn profile, connect with professionals and share relevant content. I also ensure in my communications, which are done in emails and online, that I am professional. In the future, my plan is to continue developing a strong professional identity by maintaining ethical behavior, as well as polish my communication skills and practice awareness of my digital footprint. This learning has reinforced the awareness that professionalism is not solely about acquiring skills, but also about presenting herself in a consistent manner in a range of environments.
+</p>
+</br>
+<p>
+    <strong> Business Ethics</strong><br></p>
+    <p>
+Another important lesson I have learnt from my course is on the business ethical conduct and corporate responsibility. Business ethics refers to the practice of making decisions that are not just legally compliant, but also morally appropriate and ethics is essential in establishing trust with stakeholders such as customers, employees, investors etc.
+    </p><br>
+    <p>
+        Through my studies, I have learned that organizations exist in a complex environment where ethical issues arise frequently. Issues like data privacy, transparency and fair treatment of employees have become increasingly significant in the modern business environment and ethical conduct helps maintain a good reputation and long term success.
+This learning has been especially useful in understanding how business formulates decisions. I have come to realize that short term profit maximization should not be at the expense of ethical standards. Companies that do not adopt ethical practices can face legal repercussions, damage to the company's image, and loss of customer confidence.
+    </p><br>
+    <p>
+        In my academic work, this understanding has helped me to analyze critically case studies and business scenarios. Now, I take into consideration the ethical implications in making business decisions and I am more aware of values of honesty, integrity and accountability in my personal development.
+In real life, I intend to use this learning by ensuring that my actions as a professional conform with ethical principles. Whether I am involved in finance or management, I strive to make good decisions that balance organizational objectives and social impact.
+
+In my daily life, I have also started to practice this knowledge as I now make responsible decisions and am more aware of keeping my work and studies with integrity. I, for example, make sure that my assignments are done honestly and I respect scholastic standards of integrity.
+    </p><br>
+    <p>
+
+In future, I hope to work with organizations that have ethical practices and make a contribution to society. This learning has changed my view on business and the significance of ethical leadership for sustainable success.
+    </p><br>
+
+    <p>
+        <strong>Enagagement of Stakeholders</strong><br>
+    </p>
+    <p>
+       A major idea that I have internalized over the duration of my course is stakeholder engagement and relationship management.  
+Corporations do not operate in hermetically sealed realms, but are instead deeply intertwined with a host of stakeholders, such as customers, employees, suppliers, and the larger community. A thorough total comprehension and strategic management of these interrelations is an indispensable prerequisite for sustainable, long-term success.  
+The main learning I have gained is that successful stakeholder engagement requires good communication, trust and understanding of goals. organizations need to systematically recognize their stakeholder groups, understand their expectations and maintain constructive and mutual relationships. This endeavour requires high level communication competencies and an ability to harmonise diverging interests.  
+The relevance of this construct to my academic endeavors has been of particular salience especially in the case of collaborative research projects. I have come to see members of an academic team as stakeholders in their own right; hence the development of transparent, cooperative dialogue becomes key to the accomplishment of collective scholarly goals. By being aware of the special nature of the participants and their perspectives on tasks I have been able to make greater contributions to group tasks. 
+    </p><br>
+    <p>
+        From a professional perspective, stakeholder management plays an important role in all areas of the business. For example, in a finance-related job, effective and explicit communication with superior, clients and colleagues is the key. Well-founded stakeholder relationships have the potential to catalyse superior decision-making processes, leading to a rise in organizational performance measures.  
+To date, I have been operationalising this learning by developing my communicative skills in group situations. I actively practice attentive listening, respect differing viewpoints and provide constructive input to create a positive and productive team environment.  
+Looking ahead I would like to further develop my stakeholder management skills by continuing to develop my interpersonal communication and networking skills. I think in order to develop Professional Network I will use professional networking websites like LinkedIn and professional conferences and seminars.  
+Collectively, this learning has strengthened my appreciation for how critical collaboration and relationship-building are in helping to achieve success in both the academic and professional.
+    </p><br>
+
+    <p>
+        <strong> Organizational Culture</strong><br>
+    </p>
+    <p>
+        Throughout my time in academic, I gained much knowledge regarding organizational culture and how it impacts employee behaviour and performance. organizational culture refers to a set of values, beliefs, and practices shared across an organization that influences the interactions and collaboration between employees.
+The main learning I got was that a constructive organizational culture engages the teamwork, innovation and employee's satisfaction. Effective communication plays a pivotal role in shaping and maintaining this culture that leaders are required to relay a message with clarity and consistency in order to promote a positive work-place culture environment.
+    </p><br>
+    <p>
+        This understanding has been found to be useful in determining the dynamics of workplaces of different types. I have seen that a strong organizational culture can improve productivity and motivation, while a negative culture can contribute to conflict and low productivity.
+Within my academic setting the concept has allowed me to better participate in group work settings. I try to be helpful to a positive team environment through showing respect, supportiveness, and receptivity to feedback. Proficient communication has led to the lesser misunderstanding and greater collaboration.
+In an actual context, I plan on implementing this learning by taking a more active role in the development of a positive work place atmosphere. I will emphasise clear communication, team work-working together as a team, and respect for diversity. Mastery of these competencies is required in creating a strong professional relationship and achieving organizational objectives.
+I have already started to apply these principles in my part-time employment by having a positive interaction with colleagues and customers, having a clear articulation of messages and dealing with situations with professional decorum.
+
+    </p><br>
+    <p>
+        Looking ahead, trough organizational development, I will strive to develop leadership capabilities that will allow me to impact organizational culture in a positive manner. This knowledge has strengthened the idea that culture and communication play an important role in the success of businesses.
+    </p><br>
+
+    <p>
+        <strong>The concept of digital foot print and Online reputation</strong><br>
+    </p>
+    <p>
+
+The course identified the issue of digital feetprints and online reputations. In the context of modern knowledge environments, any activity on the network has a political impact on the professional identity of the subject. Recruiters often check the digital footprint of potential candidates before making final decision on the hire.
+The most important takeaway from this research is that it is imperative for one to manage their digital footprint carefully in order to build a strong professional image. Online behavior, social media and online correspondence all sum up in the external perception. A positive online persona can create opportunities, while a negative one can cause damage to the reputation.
+This knowledge has proved invaluable to my personal/professional growth. I am wiser now of the effect digital actions have on my career path. Consequently, I have undertaken a systematic review and improvement of my social - media profiles to ensure that they are in line with the standards of professional practice.
+    </p><br>
+    <p>
+        In my scholarly work, I put this understanding into practice by maintaining normative standards of professionalism in virtual dialogues and correspondence. I endeavur to ensure that all the interactions are done respectfully and suitably.
+One way that I have operationalized this insight is by curating and giving my LinkedIn profile a boost. I have included academic credentials, relevant competences and work experience, among others, and I have initiated relations with experts in the field. This initiative has helped to increase the size of my professional network.
+Looking towards the future, I am planning to proactively control my digital presence through the sharing of relevant content, participation in expert discussions, and continuous improvement of my online profile. In addition, I would like to practice digital communication competencies, which are essential in today's workplaces.
+    </p><br>
+    <p>
+        Overall this learning has shed light into the constant nature of one's digital footprint. It forms a significant part of developing a successful career opportunity as a professional in the digital world.
+    </p>
+</div>
+
+<!-- Peer Evaluation Post -->
+<div class="card" id="peerevau">
+<h3>Peer Evaluation Post</h3>
+<p>
+hroughout my studies at the Institute of Corporate Leadership (ICL), I was provided with substantive peer feedback when I participated in group deliberations and collaborative exercises. This feedback focused mostly on my teamwork, communicative effectiveness, and involvement in formal presentations.
+Colleagues higher me as being a help, responsible and cooperative member of teams, with contributions that have been well received in group task situations. They praised my sensitivity to the ideas of other people, and my ability to maintain a respectful and cooperative work environment with others.
+Nevertheless, they noted that my level of engagement across presentations was relatively subdued and that I have the tendency to show reticence when articulating my perspectives during group discussions. This observation made me realize that while I am a person who works very well in frameworks of teams, I have to increase my confidence in speaking publicly and actively engaging others as well.
+</p><br>
+<p>
+    The feedback has had a significant influence on not only my personal development, but also my professional development. It made clear the need to complement behind the scenes contributions with a visible presence and assured articulation when dispensing ideas. Proficient communication and presentation competencies are indispensable in the business milieu, especially in leadership and managerial roles.
+Accordingly, I have taken steps to improve such weaknesses. I now painstakingly prepare before going into group discussions and try to communicate my positions more often. Moreover, I have started a systematic practice of my presentation skills in order to develop self-assurance. In the long run, I plan to continue to develop these skills by trying to find more opportunities for public speaking in group settings, and also by incorporating feedback as it is an iterative process.
+</p><br>
+<p>
+    Finaly  this peer feedback has proven extremely beneficial in guiding my improvement as a people, aiding a new degree of self-assurance, and becoming a more successful member of the profession.
+</p>
+</div>
+
+<!-- CONTACT -->
+<div class="card" id="contact">
+<h3>Contact</h3>
+
+<div class="contact-item">
+<i class="fas fa-envelope"></i> shashijayalath@yahoo.com
+</div>
+
+<div class="contact-item">
+<i class="fas fa-phone"></i> +94 773505452
+</div>
+
+<div class="contact-item">
+<i class="fas fa-location-dot"></i> Auckland, New Zealand
+</div>
+
+<div class="contact-item">
+<i class="fab fa-linkedin"></i> LinkedIn Profile
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
